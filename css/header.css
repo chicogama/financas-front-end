@@ -1,0 +1,21 @@
+header {
+    background-color: mistyrose;
+}
+
+nav .navbar.navbar-expand-lg.navbar-light.bg-light {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 120px;
+    background-color: #1E597B;
+    padding: 0px 0px 0px 0px;
+    border: 1px solid rgba(0, 0, 0, .0625)
+}
+
+nav a {
+    text-decoration: none;
+    color: #72777a;
+    margin: 20px;
+}

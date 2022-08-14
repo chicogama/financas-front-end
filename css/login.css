@@ -1,0 +1,41 @@
+login {
+    height: 100%;
+    display: flex;
+}
+
+.login-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginform {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+.loginform-wrapper {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.loginform-wrapper button {
+    width: 100%;
+    border: none;
+    background: lavenderblush;
+    color: black;
+}

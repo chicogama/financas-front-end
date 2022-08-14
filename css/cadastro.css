@@ -1,0 +1,124 @@
+/*Tamanho da tela de fundo*/
+
+
+/* body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95vh;
+} */
+
+
+/*--------------------------------Corpo principal da página--------------------------------*/
+
+.corpo-principal {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: none;
+    border-radius: 100px 0 100px 0;
+    background: linear-gradient(270deg, rgb(121, 203, 207), rgb(17, 157, 175));
+}
+
+
+/*Corpo principal do Formulário de cadastro.*/
+
+.formDados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formDados h1 {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*--------------------------------Formulário--------------------------------*/
+
+.quadro-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 75%;
+    height: 70%;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+}
+
+
+/*Texto acima dos input de informação*/
+
+.quadro-dados label {
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/*Input de dados do formulário*/
+
+.quadro-dados input {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+}
+
+
+/*Botão para cadastro*/
+
+.botao-form {
+    border: none;
+    border-radius: 5px;
+    background: white;
+    height: 30px;
+    width: 100px;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.botao-form:hover {
+    background: rgb(156, 156, 156);
+    color: white;
+}
+
+.botao-form:active {
+    background: white;
+    color: black;
+    transform: translateY(5px);
+}
+
+
+/*--------------------------------Quadro lateral--------------------------------*/
+
+.descricao {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.descricao p {
+    color: white;
+    width: 300px;
+    font-size: 20px;
+}
+
+
+/*imagem do banco*/
+
+.imgBanco {
+    width: 500px;
+    height: 150px;
+}
