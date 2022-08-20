@@ -3,6 +3,11 @@ login {
     display: flex;
 }
 
+.loginform-wrapper {
+    border-radius: 7px;
+    background-color: lavender;
+}
+
 .login-title {
     display: flex;
     flex-direction: column;
