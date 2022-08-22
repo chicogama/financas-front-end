@@ -10,5 +10,9 @@ footer .copy {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    background-color: mistyrose;
+    background-color: #1E597B;
+}
+
+footer h5 {
+    color: aliceblue;
 }

@@ -23,7 +23,7 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="sidebar-brand">
                 <a class="navbar-brand" href="#">
-                    <img src="./imgs/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> 2⁴ Finanças
+                    <img src="./imgs/LogoTipo-1.png" width="80" height="80" class="d-inline-block align-top" alt="">
                 </a>
 
             </div>
@@ -40,8 +40,17 @@
                     </li>
 
                 </ul>
-                <a href="/views/login.html"> <i class="fa-regular fa-circle-user"></i> Login</a>
-                <a onclick="logout()" href="#"> <i class="fa-regular fa-circle-user"></i> Logout</a>
+                <div class="btnlogin">
+                    <a href="/views/login.html" id="loginbtn"> <i class="fa-regular fa-circle-user"></i> Login</a>
+                    <!--  <a onclick="logout()" href="#"> <i class="fa-regular fa-circle-user"></i> Logout</a> -->
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn rounded-circle border-light" id="btnuser"><img src="https://placekitten.com/75/75" alt="..." class="rounded-circle"></button>
+                    <div class="dropdown-content">
+                        <a href="./views/pefil.html">Perfil</a>
+                        <a onclick="logout()" href="#">Logout</a>
+                    </div>
+                </div>
             </div>
         </nav>
         </nav>

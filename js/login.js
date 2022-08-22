@@ -1,6 +1,8 @@
 var jwt = localStorage.getItem("jwt");
 if (jwt != null) {
     window.location.href = '../index.html'
+    document.getElementById('btnlogin').style.display = "none";
+    document.getElementById('btnuser').style.display = "block";
 }
 
 function login() {
@@ -42,9 +44,9 @@ function login() {
 }
 
 
-function logout() {
+/* function logout() {
     if (jwt != null) {
         localStorage.removeItem("jwt");
         window.location.href = '../index.html'
     }
-}
+} */

@@ -5,13 +5,18 @@ login {
 
 .loginform-wrapper {
     border-radius: 7px;
-    background-color: lavender;
+    background-color: #1E597B;
 }
 
 .login-title {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.sidebar-brand {
+    margin: 0;
+    padding: 0px;
 }
 
 .loginform {
@@ -41,6 +46,22 @@ login {
 .loginform-wrapper button {
     width: 100%;
     border: none;
-    background: lavenderblush;
+    background: azure;
     color: black;
+}
+
+.loginform-wrapper button:hover {
+    color: darkgray;
+}
+
+.loginform-wrapper a {
+    color: aliceblue;
+}
+
+.loginform-wrapper a:hover {
+    color: darkgray;
+}
+
+.loginform-wrapper label {
+    color: aliceblue;
 }
