@@ -7,8 +7,16 @@ function getPerfil(url) {
     xhttp.open("GET", url, false);
     xhttp.setRequestHeader("Authorization", "Bearer " + jwt);
     xhttp.send()
-    return xhttp.responseText;
+    dadosUsuario = xhttp.responseText;
+
+    console.log(dadosUsuario)
+
+    var meuNome = document.getElementById("meunome").value;
+    var meu = JSON.stringify(dadosUsuario);
+    document.getElementById('meunome').value = meu;
+
+
 }
 
 
-console.log(getPerfil("https://api-financa.herokuapp.com/api/Usuario"))
+getPerfil("https://api-financa.herokuapp.com/api/Usuario")

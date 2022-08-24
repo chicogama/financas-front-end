@@ -1,0 +1,64 @@
+.perfil-geral {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perfil {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    padding: 0px 40px;
+}
+
+div.perfil-img {
+    width: 40%;
+}
+
+div.perfil-formulario {
+    width: 60%;
+    padding: 10px;
+    border: 3px solid rgb(17, 157, 175);
+    border-radius: 5px;
+}
+
+.imagem {
+    width: 400px;
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid rgb(17, 157, 175);
+    border-radius: 5px;
+    background-image: url(https://placekitten.com/400/500);
+}
+
+#imgperfil {
+    border: 1px solid rgb(17, 157, 175);
+    border-radius: 3px;
+    margin-top: -20px;
+}
+
+.perfil-formulario button {
+    color: #FFF;
+    border: 2px solid #1E597B;
+    border-radius: 5px;
+    background-color: rgb(17, 157, 175);
+}
+
+.perfil-formulario button:hover {
+    background-color: #1E597B;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+.perfil-formulario label {
+    font-size: 14px;
+}
+
+.perfil-formulario input {
+    font-size: 14px;
+}

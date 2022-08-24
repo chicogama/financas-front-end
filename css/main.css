@@ -10,3 +10,11 @@ main .maincontent {
     height: calc(100% - 90px);
     overflow-y: auto;
 }
+
+main .titulo {
+    text-align: center;
+    color: #f7f7f7;
+    background-color: rgb(17, 157, 175);
+    text-transform: uppercase;
+    border-radius: 5px;
+}

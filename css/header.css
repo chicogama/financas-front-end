@@ -1,4 +1,4 @@
-nav .navbar.navbar-expand-lg.navbar-light.bg-light {
+nav {
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -6,8 +6,6 @@ nav .navbar.navbar-expand-lg.navbar-light.bg-light {
     align-items: center;
     justify-content: space-between;
     height: 120px;
-    padding: 0px 0px 0px 0px;
-    border: 1px solid rgba(0, 0, 0, .0625)
 }
 
 nav a {
@@ -25,6 +23,8 @@ nav .sidebar-brand {
     height: 110px;
     border: none;
     background-color: #1E597B;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 nav .sidebar-brand img {
@@ -32,7 +32,20 @@ nav .sidebar-brand img {
     border-radius: 20px;
 }
 
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 0;
+    list-style: none;
+    height: 110px;
+    align-items: center;
+}
+
 #navbarSupportedContent {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     background-color: #1E597B;
     height: 110px;
     width: 100%;
@@ -40,18 +53,21 @@ nav .sidebar-brand img {
 
 #navbarSupportedContent a {
     color: #f1f1f1;
+    text-transform: uppercase;
 }
 
-#navbarSupportedContent a:hover {
-    color: darkgray;
+#navbarSupportedContent li {
+    height: 100%;
+    padding-top: 15px;
+}
+
+#navbarSupportedContent li:hover {
+    background-color: rgb(17, 157, 175);
 }
 
 .btnlogin {
     display: block;
 }
-
-
-/* Dropdown Button */
 
 .dropbtn {
     color: white;
@@ -59,18 +75,12 @@ nav .sidebar-brand img {
     border: 2px solid white;
 }
 
-
-/* The container <div> - needed to position the dropdown content */
-
 .dropdown {
     margin: 10px;
     float: right;
     align-items: center;
     display: none;
 }
-
-
-/* Dropdown Content (Hidden by Default) */
 
 .dropdown-content {
     display: none;
@@ -82,9 +92,6 @@ nav .sidebar-brand img {
     z-index: 1;
     right: 0;
 }
-
-
-/* Links inside the dropdown */
 
 .dropdown-content i {
     margin: 10px;
@@ -99,22 +106,13 @@ nav .sidebar-brand img {
     display: block;
 }
 
-
-/* Change color of dropdown links on hover */
-
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: rgb(17, 157, 175);
 }
-
-
-/* Show the dropdown menu on hover */
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
 
 .dropdown:hover .dropbtn {
     background-color: #3e8e41;
