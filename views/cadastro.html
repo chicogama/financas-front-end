@@ -18,64 +18,60 @@
     <title>2⁴ Finanças</title>
 </head>
 
-<body>
+<body class="corpo">
     <main class="corpo-principal">
         <section class="formDados">
-            <h1>Criação de conta</h1>
 
-            <fieldset class="quadro-dados">
+            <h1>Cadastro de usuário</h1>
 
-                <legend class="teste">Formulário de cadastro</legend>
+            <form class="formulario" onsubmit="return cadastra()">
+                <fieldset class="quadro-dados">
 
-                <div>
-                    <form onsubmit="return cadastra()">
-                        <div class="form-group">
-                            <label for="fnome">Nome Completo</label>
-                            <input type="text" class="form-control" id="nomec" placeholder="Nome">
-                        </div>
-                        <div class="form-group">
-                            <label for="fmail">E-mail</label>
-                            <input type="email" class="form-control" id="fmail" aria-describedby="emailHelp" placeholder="E-mail">
-                        </div>
-                        <div class="form-group">
-                            <label for="fCPF">CPF</label>
-                            <input type="text" class="form-control" id="fCPF" placeholder="CPF">
-                        </div>
-                        <div class="form-group">
-                            <label for="fnascimento">Data de Nascimento</label>
-                            <input type="date" class="form-control" id="fnascimento" placeholder="Data de Nascimento">
-                        </div>
-                        <div class="form-group">
-                            <label for="fsenha">Senha</label>
-                            <input type="password" class="form-control" id="fsenha" placeholder="Senha">
-                        </div>
-                        <div class="form-group">
-                            <label for="fconfsenha">Confirme sua Senha</label>
-                            <input type="password" class="form-control" id="fconfsenha" placeholder="Confirme sua Senha">
-                        </div>
+                    <legend class="teste">Formulário de cadastro</legend>
 
-                        <div>
-                            <button type="submit" class="botao-form">Cadastrar</button>
-                        </div>
-                    </form>
-                </div>
+                    <label for="fnome">Nome completo</label>
+                    <input type="text" name="" id="fnome" required placeholder="Ex:Maria josé das dores">
 
-            </fieldset>
+                    <label for="fmail">E-mail</label>
+                    <input type="email" name="" id="fmail" required placeholder="fulano@gmial.com">
 
+                    <label for="fCPF">CPF</label>
+                    <input type="text" name="" id="fCPF" required placeholder="xxx.xxx.xxx-xx">
+
+                    <label for="fnascimento">Data de nascimento</label>
+                    <input type="date" name="" id="fnascimento" required>
+
+                    <label for="fsenha">Senha</label>
+                    <input type="password" name="" id="fsenha">
+
+                    <label for="fconfsenha">Confirme sua Senha</label>
+                    <input type="password" name="" id="fconfsenha">
+                    <span id="alerta" style="color: #FFF;"></span>
+
+                    <button type="submit" class="botao-form" id="botaoEnvio">Cadastrar</button>
+
+                </fieldset>
+            </form>
         </section>
 
         <section class="descricao">
+
             <div>
+
                 <img src="../imgs/LogoBanco1.png" alt="Logo do banco genérico" class="imgBanco">
+
             </div>
+
             <p>
+
                 Bem-vindo(a)! <br> Por favor, preencha todos os dados de acordo com o que é requisitado no Formulário para que seja feita a criação da sua conta com sucesso
+
             </p>
+
         </section>
     </main>
-
     <script src="../js/cadastro.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
 </body>
 
 </html>

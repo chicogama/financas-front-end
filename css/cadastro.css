@@ -1,21 +1,19 @@
 /*Tamanho da tela de fundo*/
 
-
-/* body {
+.corpo {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 95vh;
-} */
+}
 
 
 /*--------------------------------Corpo principal da página--------------------------------*/
 
 .corpo-principal {
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     border: none;
@@ -35,20 +33,29 @@
 
 .formDados h1 {
     color: white;
-    font-size: 50px;
-    margin: 0;
-    padding: 0;
+    font-size: 40px;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 
 /*--------------------------------Formulário--------------------------------*/
 
-.quadro-dados {
+.formulario {
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     width: 75%;
-    height: 70%;
+    height: 100%;
+}
+
+.quadro-dados {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 90%;
     text-align: center;
     border: 2px solid white;
     border-radius: 15px;
@@ -80,16 +87,23 @@
     border: none;
     border-radius: 5px;
     background: white;
-    height: 30px;
-    width: 100px;
+    height: 35px;
+    width: 75%;
     font-size: 14px;
     transition: 0.5s;
+    align-self: center;
 }
+
+
+/*Ao passar o icone do mouse em cima do botão.*/
 
 .botao-form:hover {
     background: rgb(156, 156, 156);
     color: white;
 }
+
+
+/*Ao clicar no botão de cadastro*/
 
 .botao-form:active {
     background: white;
@@ -109,16 +123,85 @@
     align-items: center;
 }
 
+
+/*Estulização paragrafo da descrição da tela de cadastro*/
+
 .descricao p {
     color: white;
-    width: 300px;
+    width: 80%;
     font-size: 20px;
+    margin: 0 auto;
 }
 
 
 /*imagem do banco*/
 
 .imgBanco {
-    width: 500px;
-    height: 150px;
+    width: 80%;
+    height: 100%;
+}
+
+
+/*--------------------------------Responsividade--------------------------------*/
+
+@media (max-width:768px) {
+    /*Ajustando tamanho da tela para caber todo o menu.*/
+    .corpo {
+        height: 100%;
+    }
+    /*Ajustando ordenamento dos itens.*/
+    .corpo-principal {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        border-radius: 100px 100px 0 0;
+    }
+    /*Ajustando afastamento do topo da tela do formulário de cadastro.*/
+    .formDados {
+        margin: 25px 0 0 0;
+    }
+    /*Ajustando espaçamento do título para o formulário e da imagem do banco para o formulário.*/
+    .quadro-dados {
+        margin: 5px 0 10px 0;
+    }
+    /*Ajustando o tamanho do botão*/
+    .botao-form {
+        height: 25px;
+        margin: 5px 0 0 0;
+    }
+    /*Ajustar alinhamento da imagem e descrição.*/
+    .descricao {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*ajustando alinhamento interno da div onde a imagem esta*/
+    .descricao div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /*Aumentando margem do botão para os inputs acima dele.*/
+    .botao-form {
+        margin: 10px 0 0 0;
+    }
+}
+
+
+/*Responsividade para dispositivos menores que - L movél 425px*/
+
+@media (max-width: 425px) {
+    .formulario {
+        align-items: center;
+    }
+    .formDados h1 {
+        font-size: 25px;
+    }
+    .quadro-dados label {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+    .quadro-dados input {
+        padding: 1px;
+    }
 }

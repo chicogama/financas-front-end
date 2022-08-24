@@ -5,7 +5,7 @@ login {
 
 .loginform-wrapper {
     border-radius: 7px;
-    background-color: #1E597B;
+    background: linear-gradient(270deg, rgb(121, 203, 207), rgb(17, 157, 175));
 }
 
 .login-title {
@@ -41,6 +41,13 @@ login {
     flex-direction: column;
     padding: 20px;
     margin-top: 10px;
+}
+
+.sidebar-brand img {
+    width: 80px;
+    height: 80px;
+    border: solid 2px #FFF;
+    border-radius: 15px;
 }
 
 .loginform-wrapper button {

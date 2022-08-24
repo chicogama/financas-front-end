@@ -37,10 +37,20 @@
                         <a class="nav-link" href="./dashboard.html">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./lancamentos.html">Laçamentos</a>
+                        <a class="nav-link" href="./lancamentos.html">Lançamentos</a>
                     </li>
                 </ul>
-                <a href="/views/login.html"> <i class="fa-regular fa-circle-user"></i> Login</a>
+                <div class="btnlogin">
+                    <a href="/views/login.html" id="loginbtn"> <i class="fa-regular fa-circle-user"></i> Login</a>
+                    <!--  <a onclick="logout()" href="#"> <i class="fa-regular fa-circle-user"></i> Logout</a> -->
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn rounded-circle border-light" id="btnuser"><img src="https://placekitten.com/75/75" alt="..." class="rounded-circle"></button>
+                    <div class="dropdown-content">
+                        <a href="./perfil.html"><i class="fa-regular fa-address-card"></i>Perfil</a>
+                        <a onclick="logout()" href="#"><i class="fa-solid fa-right-to-bracket"></i>Logout</a>
+                    </div>
+                </div>
             </div>
         </nav>
         </nav>
@@ -79,12 +89,8 @@
         </div>
     </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
- -->
+    <script src="../js/logout.js"></script>
+
 </body>
 
 </html>

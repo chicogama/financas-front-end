@@ -1,8 +1,6 @@
 var jwt = localStorage.getItem("jwt");
 if (jwt != null) {
     window.location.href = '../index.html'
-    document.getElementById('btnlogin').style.display = "none";
-    document.getElementById('btnuser').style.display = "block";
 }
 
 function login() {
@@ -13,17 +11,17 @@ function login() {
     xhttp.open("POST", "https://api-financa.herokuapp.com/api/Auth/signin");
     xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xhttp.send(JSON.stringify({
-        "username": username,
+        "userName": username,
         "password": password
     }));
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
             const objects = JSON.parse(this.responseText);
             console.log(objects);
-            if (objects['authenticated'] = true) {
+            if (objects['authenticated'] == true) {
                 localStorage.setItem("jwt", objects['accessToken']);
                 Swal.fire({
-                    text: objects['authenticated'],
+                    text: objects['mensagem'],
                     icon: 'success',
                     confirmButtonText: 'OK'
                 }).then((result) => {
@@ -33,7 +31,7 @@ function login() {
                 });
             } else {
                 Swal.fire({
-                    text: objects['message'],
+                    text: objects['title'],
                     icon: 'error',
                     confirmButtonText: 'OK'
                 });
@@ -42,11 +40,3 @@ function login() {
     };
     return false;
 }
-
-
-/* function logout() {
-    if (jwt != null) {
-        localStorage.removeItem("jwt");
-        window.location.href = '../index.html'
-    }
-} */
