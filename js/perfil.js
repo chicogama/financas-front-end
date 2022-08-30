@@ -4,6 +4,7 @@ function getPerfil(url) {
     const xhttp = new XMLHttpRequest();
 
 
+
     xhttp.open("GET", url, false);
     xhttp.setRequestHeader("Authorization", "Bearer " + jwt);
     xhttp.send()
@@ -18,22 +19,23 @@ function getPerfil(url) {
     var meuCPF = document.getElementById("meucpf").value;
     var meuNasc = document.getElementById("meunascimento").value;
 
-    var data = new Date(perfil.dataNascimento);
-    console.log(data)
-    var month = data.getUTCMonth() + 1; //months from 1-12
-    var day = data.getUTCDate();
-    var year = data.getUTCFullYear();
-    newdate = year + "-0" + month + "-" + day;
+    /*    var data = new Date(perfil.dataNascimento);
+       console.log(data)
+       var month = data.getUTCMonth() + 1; //months from 1-12
+       var day = data.getUTCDate();
+       var year = data.getUTCFullYear();
+       newdate = year + "-0" + month + "-" + day;
 
-    console.log(newdate)
+       console.log(newdate) */
 
     document.getElementById('meunome').value = perfil.nome;
     document.getElementById('meuemail').value = perfil.email;
     document.getElementById('meucpf').value = perfil.cpf;
-    document.getElementById('meunascimento').value = newdate;
+    document.getElementById('meunascimento').value = perfil.nascimento;
 
 
 }
 
-
-getPerfil("https://api-financa.herokuapp.com/api/Usuario");
+if (jwt != null) {
+    getPerfil("https://api-financa.herokuapp.com/api/Usuario");
+}

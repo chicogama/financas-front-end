@@ -1,0 +1,92 @@
+.insert {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-insert {
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-top: 10px;
+    align-content: center;
+    border: 3px solid #1E597B;
+    border-radius: 4px;
+}
+
+.form-insert button {
+    border: none;
+    background: azure;
+    color: black;
+}
+
+.form-insert label {
+    color: aliceblue;
+}
+
+.form-insert button {
+    color: #FFF;
+    border: 2px solid #1E597B;
+    border-radius: 5px;
+    background-color: rgb(17, 157, 175);
+    margin: 5px;
+    font-weight: bold;
+}
+
+.form-insert button:hover {
+    background-color: #1E597B;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+.form-insert label {
+    font-size: 14px;
+}
+
+.form-insert input {
+    font-size: 14px;
+}
+
+.tabela {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dados-tabela {
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 10px;
+    align-content: center;
+    border: 3px solid #1E597B;
+    border-radius: 4px;
+}
+
+.dados-tabela table {
+    border-collapse: collapse;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.dados-tabela table th {
+    height: 50px;
+    padding: 3px;
+    background-color: aqua;
+}
+
+.dados-tabela table td {
+    height: 40px;
+    padding: 5px 5px;
+}
+
+.center {
+    text-align: center;
+}
