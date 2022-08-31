@@ -61,7 +61,7 @@ class Lancamento {
         const xhttp = new XMLHttpRequest();
         xhttp.open("POST", "https://api-financa.herokuapp.com/api/Lancamento");
         xhttp.setRequestHeader("Authorization", "Bearer " + jwt);
-        xhttp.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+        xhttp.setRequestHeader("Content-Type", "Application/json;charset=UTF-8");
         xhttp.send(JSON.stringify({
             "valor": valor,
             "lancamento": tipo
