@@ -63,8 +63,8 @@ class Lancamento {
         xhttp.setRequestHeader("Authorization", "Bearer " + jwt);
         xhttp.setRequestHeader("Content-Type", "Application/json;charset=UTF-8");
         xhttp.send(JSON.stringify({
-            "valor": valor,
-            "lancamento": tipo
+            "valor": 10.5,
+            "lancamento": Entrada
         }));
     }
 
