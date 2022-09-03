@@ -59,12 +59,13 @@ class Lancamento {
 
         var jwt = localStorage.getItem("jwt");
         const xhttp = new XMLHttpRequest();
+
         xhttp.open("POST", "https://api-financa.herokuapp.com/api/Lancamento");
         xhttp.setRequestHeader("Authorization", "Bearer " + jwt);
-        xhttp.setRequestHeader("Content-Type", "Application/json;charset=UTF-8");
+        xhttp.setRequestHeader("Content-Type", "application/json");
         xhttp.send(JSON.stringify({
-            "valor": 10.5,
-            "lancamento": Entrada
+            "valor": valor,
+            "lancamentoTipo": tipo
         }));
     }
 
