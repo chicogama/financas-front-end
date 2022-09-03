@@ -34,15 +34,30 @@ class Lancamento {
         for (let i = 0; i < this.arr.length; i++) {
             let tr = tbody.insertRow();
 
-            let td_id = tr.insertCell();
+            let td_data = tr.insertCell();
             let td_tipo = tr.insertCell();
             let td_valor = tr.insertCell();
             let td_acoes = tr.insertCell();
 
-            td_id.innerText = this.arr[i].id;
             td_tipo.innerText = this.arr[i].descricaoLancamento;
             td_valor.innerText = this.arr[i].valor;
-            td_id.innerText = this.arr[i].id;
+            td_data.innerText = this.arr[i].data;
+
+            td_data.classList.add('center');
+            td_acoes.classList.add('center');
+
+            let editIcon = document.createElement('i');
+            let deleteIcon = document.createElement('i');
+
+            td_acoes.appendChild(editIcon);
+            td_acoes.appendChild(deleteIcon);
+
+            editIcon.classList.add("fa-regular")
+            editIcon.classList.add("fa-pen-to-square");
+
+            deleteIcon.classList.add("fa-regular")
+            deleteIcon.classList.add("fa-trash-can");
+
 
 
         }
@@ -67,6 +82,31 @@ class Lancamento {
             "valor": valor,
             "lancamentoTipo": tipo
         }));
+
+        console.log(xhttp.responseText)
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4) {
+                const objects = JSON.parse(this.responseText);
+                console.log(objects);
+                if (objects['codigo'] == "Status code 200") {
+                    Swal.fire({
+                        text: objects['mensagem'],
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.reload();
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        text: objects['mensagem'],
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            }
+        };
     }
 
     cancelar() {

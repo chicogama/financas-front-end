@@ -59,6 +59,10 @@
     align-items: center;
 }
 
+.center {
+    text-align: center;
+}
+
 .dados-tabela {
     width: 1200px;
     display: flex;
@@ -71,22 +75,21 @@
 }
 
 .dados-tabela table {
-    border-collapse: collapse;
+    table-layout: fixed;
     border-radius: 5px;
     width: 100%;
+    border-collapse: collapse
 }
 
 .dados-tabela table th {
     height: 50px;
     padding: 3px;
     background-color: aqua;
+    min-width: 60px;
 }
 
 .dados-tabela table td {
     height: 40px;
     padding: 5px 5px;
-}
-
-.center {
-    text-align: center;
+    min-width: 60px;
 }
