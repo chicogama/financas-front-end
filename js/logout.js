@@ -6,6 +6,8 @@ var dropdown = document.querySelector('.dropdown')
 if (jwt != null) {
     btn.style.display = 'none';
     dropdown.style.display = 'inline-block';
+} else {
+    btn.style.display = 'block';
 }
 
 function logout() {
